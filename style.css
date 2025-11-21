@@ -1,0 +1,284 @@
+/* --- 1. RESET DAN DASAR (DARK MODE) --- */
+:root {
+    /* Palet Warna Gelap */
+    --clr-bg-primary: #121212; /* Latar belakang sangat gelap */
+    --clr-bg-secondary: #1e1e1e; /* Latar belakang elemen gelap */
+    --clr-text-primary: #e0e0e0; /* Teks terang utama */
+    --clr-text-secondary: #aaaaaa; /* Teks sekunder/detail */
+    --clr-accent: #8c9eff; /* Biru muda/ungu cerah (Aksen keren) */
+    --clr-accent-dark: #6573c3; /* Aksen saat di-hover */
+    --clr-highlight: #ffc107; /* Kuning (Aksi) */
+    --clr-highlight-dark: #e0a800;
+    --clr-success: #4caf50; /* Hijau (Submit) */
+    --clr-success-dark: #388e3c;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: var(--clr-text-primary); /* Warna teks utama */
+    background-color: var(--clr-bg-primary); /* Warna latar belakang halaman gelap */
+}
+
+/* Menghilangkan bullet pada list */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-accent); /* Warna link default */
+}
+
+/* Penataan untuk semua bagian (section) */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: var(--clr-bg-primary); /* Tetapkan latar belakang primary */
+}
+
+/* --- 2. HEADER DAN NAVIGASI (DARK MODE) --- */
+header {
+    background-color: var(--clr-bg-secondary); /* Latar belakang header gelap */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Bayangan lebih gelap */
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+nav h1 {
+    color: var(--clr-text-primary);
+    font-size: 1.8em;
+    margin: 0;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li a {
+    color: var(--clr-text-secondary); /* Warna link navigasi sekunder */
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--clr-accent); /* Warna aksen saat di-hover */
+}
+
+/* --- 3. BAGIAN HERO (UTAMA) (DARK MODE) --- */
+#hero {
+    /* Gradien untuk kesan dramatis */
+    background: linear-gradient(135deg, #1f4068, #162447); 
+    color: white;
+    padding: 100px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hero img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--clr-accent); /* Border dengan warna aksen */
+    margin-bottom: 20px;
+}
+
+#hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    color: var(--clr-text-primary); /* Pastikan teks terbaca */
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--clr-highlight); /* Warna kuning */
+    color: var(--clr-bg-primary); /* Teks gelap di tombol terang */
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+    background-color: var(--clr-highlight-dark);
+    transform: translateY(-2px);
+}
+
+/* --- 4. BAGIAN UMUM (TENTANG, KEAHILIAN, KONTAK) (DARK MODE) --- */
+h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: var(--clr-accent); /* Judul dengan warna aksen */
+}
+
+#tentang {
+    background-color: var(--clr-bg-secondary); /* Latar belakang section About/Tentang */
+    color: var(--clr-text-primary);
+}
+
+/* --- 5. BAGIAN PROYEK (DARK MODE) --- */
+#proyek {
+    background-color: var(--clr-bg-primary);
+}
+
+.proyek-item {
+    background-color: var(--clr-bg-secondary); /* Latar belakang item proyek */
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.proyek-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); /* Bayangan lebih intens */
+}
+
+.proyek-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.proyek-item h3 {
+    color: var(--clr-accent);
+}
+
+/* Menggunakan Flexbox untuk tata letak proyek */
+#proyek > div { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* --- 6. BAGIAN KEAHILIAN (SKILL) (DARK MODE) --- */
+#keahlian {
+    background-color: var(--clr-bg-secondary); /* Section Skills/Keahlian */
+}
+
+#keahlian ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#keahlian ul li {
+    background-color: #333; /* Latar belakang chip skill lebih gelap */
+    color: var(--clr-accent); /* Teks skill dengan warna aksen */
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    font-weight: 600;
+    border: 1px solid var(--clr-accent-dark);
+}
+
+/* --- 7. BAGIAN KONTAK (DARK MODE) --- */
+#kontak form {
+    max-width: 500px;
+    margin: 0 auto 30px auto;
+    text-align: left;
+    padding: 20px;
+    background-color: var(--clr-bg-secondary); /* Latar belakang form gelap */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#kontak label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: var(--clr-text-primary);
+}
+
+#kontak input[type="text"],
+#kontak input[type="email"],
+#kontak textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #555; /* Border input gelap */
+    background-color: #333; /* Latar belakang input gelap */
+    color: var(--clr-text-primary); /* Teks input terang */
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#kontak textarea {
+    resize: vertical;
+}
+
+#kontak button[type="submit"] {
+    background-color: var(--clr-success); /* Warna hijau yang bagus */
+    color: var(--clr-bg-primary);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#kontak button[type="submit"]:hover {
+    background-color: var(--clr-success-dark);
+}
+
+/* --- 8. FOOTER (DARK MODE) --- */
+footer {
+    background-color: #0d0d0d; /* Footer lebih gelap dari body */
+    color: var(--clr-text-secondary);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+/* --- 9. MEDIA QUERIES (Responsif untuk Layar Kecil) --- */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 0 5px;
+    }
+
+    #hero h2 {
+        font-size: 2em;
+    }
+}
